@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model colegio {
+  id          String    @id @db.VarChar(12)
+  nombre      String    @db.VarChar(200)
+  municipioid String    @db.VarChar(5)
+  municipio   municipio @relation(fields: [municipioid], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  sede        sede[]
+}
+
+model departamento {
+  id        String      @id @db.VarChar(2)
+  nombre    String      @db.VarChar(100)
+  municipio municipio[]
+}
+
+model municipio {
+  id             String       @id @db.VarChar(5)
+  nombre         String       @db.VarChar(100)
+  departamentoid String       @db.VarChar(2)
+  colegio        colegio[]
+  departamento   departamento @relation(fields: [departamentoid], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model sede {
+  id        String  @id @db.VarChar(14)
+  nombre    String  @db.VarChar(200)
+  direccion String? @db.VarChar(255)
+  colegioid String  @db.VarChar(12)
+  colegio   colegio @relation(fields: [colegioid], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
