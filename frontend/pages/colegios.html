@@ -1,0 +1,42 @@
+<!-- colegios.html -->
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegios - Gestión Educativa</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Colegios</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="municipios.html">Municipios</a></li>
+                <li><a href="colegios.html">Colegios</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Lista de Colegios</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Municipio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="colegios-list">
+                <!-- Datos cargados desde JS -->
+            </tbody>
+        </table>
+        <button id="agregar-colegio">Agregar Colegio</button>
+    </main>
+    <script src="../js/colegios.js"></script>
+</body>
+</html>

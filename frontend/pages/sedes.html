@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Sedes</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Sedes</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Lista de Sedes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Colegio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="sedes-lista">
+                    <!-- Datos dinámicos aquí -->
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Agregar Sede</h2>
+            <form id="sedes-form">
+                <label for="nombre">Nombre de la Sede:</label>
+                <input type="text" id="nombre" required>
+                <label for="colegio">Colegio:</label>
+                <select id="colegio" required>
+                    <!-- Opciones dinámicas aquí -->
+                </select>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+    </main>
+    <script src="../js/sedes.js"></script>
+</body>
+</html>

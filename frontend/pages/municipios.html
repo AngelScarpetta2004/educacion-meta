@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Municipios</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Municipios</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Lista de Municipios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="municipios-lista">
+                    <!-- Datos dinámicos aquí -->
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Agregar Municipio</h2>
+            <form id="municipios-form">
+                <label for="nombre">Nombre del Municipio:</label>
+                <input type="text" id="nombre" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+    </main>
+    <script src="../js/municipios.js"></script>
+</body>
+</html>
